@@ -1,11 +1,19 @@
-﻿Console.Write("add meg a termék nevét");
+﻿bool kedvezmeny = false;
+Console.Write("add meg a termék nevét: ");
 string termekNev = Console.ReadLine();
-Console.Write("add meg a termék egységárát");
+Console.Write("add meg a termék egységárát: ");
 int termekar = int.Parse(Console.ReadLine());
-Console.Write("add meg a termék vásárolt mennyiségét");
+Console.Write("add meg a termék vásárolt mennyiségét: ");
 int termemeny = int.Parse(Console.ReadLine());
-Console.Write("jar e kedvezmeny");
-bool kedvezmeny = bool.Parse(Console.ReadLine());
+Console.Write("jar e kedvezmeny (i/n): ");
+if (Console.ReadLine() == "i")
+{
+     kedvezmeny = true;
+}
+else
+{
+     kedvezmeny = false;
+}
 if (kedvezmeny == true)
 {
 if ((termekar*termemeny) >= 10000) Console.WriteLine("a termék ára: " + termekar * termemeny * 0.9);
